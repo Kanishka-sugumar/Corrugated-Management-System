@@ -528,6 +528,7 @@ def edit_profile_view(request):
 def aboutus_view(request):
     return render(request,'ecom/aboutus.html')
 
+
 def contactus_view(request):
     sub = forms.ContactusForm()
     if request.method == 'POST':
@@ -539,3 +540,29 @@ def contactus_view(request):
             send_mail(str(name)+' || '+str(email),message, settings.EMAIL_HOST_USER, settings.EMAIL_RECEIVING_USER, fail_silently = False)
             return render(request, 'ecom/contactussuccess.html')
     return render(request, 'ecom/contactus.html', {'form':sub})
+
+@login_required(login_url='adminlogin')
+def sales_report_view(request):
+    orders=models.Orders.objects.all()
+    ordered_products=[]
+    ordered_bys=[]
+    for order in orders:
+        ordered_product=models.Product.objects.all().filter(id=order.product.id)
+        ordered_by=models.Customer.objects.all().filter(id = order.customer.id)
+        ordered_products.append(ordered_product)
+        ordered_bys.append(ordered_by)
+    return render(request,'ecom/sales.html',{'data':zip(ordered_products,ordered_bys,orders)})
+
+@login_required(login_url='adminlogin')
+def raw_v(request):
+    productForm=forms.ProductForm()
+    if request.method=='POST':
+        productForm=forms.ProductForm(request.POST, request.FILES)
+        if productForm.is_valid():
+            productForm.save()
+        return HttpResponseRedirect('admin-products')
+    return render(request,'ecom/raw.html',{'productForm':productForm})
+@login_required(login_url='adminlogin')
+def raw_view(request):
+    products=models.Product.objects.all()
+    return render(request,'ecom/admin_products.html',{'products':products})

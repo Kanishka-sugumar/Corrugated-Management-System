@@ -39,6 +39,9 @@ urlpatterns = [
     path('update-order/<int:pk>', views.update_order_view,name='update-order'),
 
 
+    path('sales-report', views.sales_report_view,name='sales-report'),
+    path('raw', views.raw_view,name='raw'),
+
     path('customersignup', views.customer_signup_view),
     path('customerlogin', LoginView.as_view(template_name='ecom/customerlogin.html'),name='customerlogin'),
     path('customer-home', views.customer_home_view,name='customer-home'),
