@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>LazyCoder || sumit</title>
+
+  <title>sumit</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+     .h1{
+  text-align: center;
+ }
+ .Disp_values:after {
+  content: "";
+  display: table;
+  clear: both;
+
+ }
+
+ .corru{
+<!--  margin-left: 20px;-->
+<!--  margin-right: 20px;-->
+  text-align: justify;
+ }
+ .column{
+  text-align: center;
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px;
+ }
+ .column1{
+  text-align: center;
+  float: left;
+  width: 33%;
+  padding: 10px;
+  height: 300px;
+ }
+ * {
+  box-sizing: border-box;
+}
+
+.Disp_para{
+  text-align:center;
+}
+ .ab{
+  text-align: center;
+ }
+
+ .list{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+ }
+  .about{
+    background-image: url('img_girl.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 1380px;
+    height: 1700px;
+    display: flex;
+    flex-direction: column;
+<!--    border: 2px solid black;-->
+  }
+  .aboutTop{
+
+    margin: 30px;
+    height: 1700px;
+<!--    background-color: #ffffff;-->
+<!--    border: 1px solid black;-->
+<!--    opacity: 0.6;-->
+  }
+
+  .para{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+
+  .img{
+    align-items: center;
+  }
+
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+  /*.aboutBottom {
+    display: flex;
+    flex-direction: column;
+    height: 55%;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .aboutBottom p {
+    width: 1200px;
+  }
+
+  .about .aboutBottom h1 {
+    font-weight: 400;
+    font-size: 70px;
+    color: black;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-40px);
+  }*/
+body{
+
+ background:url("https://media.istockphoto.com/id/1225951784/photo/cardboard-box-view-through-the-center-on-a-white-background.jpg?s=612x612&w=0&k=20&c=0Ri_FUXwmYVECFunZHnpSp7d1lb0fSPG4lB3u92Mut0=") ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+  </style>
+</head>
+
+<body>
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+<div class="about">
+  <div class="aboutTop">
+  <b><h1 class="h1"> ABOUT US</h1><br/>
+        <p className="para">
+        At Rayer Packaging Industry, we believe there's a better way to find packaging supplies. That's why we've created the ultimate online platform for you to find exactly what you need - without any hassles.
+
+Thanks to our honest pricing, knowledgeable product specialists, and impeccable customers service, we've been able to positions ourselves as the industrial packaging distributors.Our job is to keep your packaging operation moving forward without missing a beat and we're proud to say that we're pretty darn great at our job.</p>
+</b><br/>
+<br/><h1 className="ab" style="text-align:center;">WE MAKE YOUR JOB EASIER</h1>
+<ul className="list" style="text-align:center;"><b>
+  1.Easy online ordering<br/>2.Friendly, helpful, and knowledgeable customer service team<br/>3.High-quality products from trustworthy manufacturers</b><br/>
+  </ul><br/>
+<b><h1 className="ab" style="text-align:center;">OUR VALUES</h1></b>
+<div class="Disp_values">
+  <div class="column">
+    <img src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/Integrity.png" alt="Integrity" width="180" />
+    <h4 style="text-align:center;">INTEGRITY</h4>
+    <p class="Disp_para">
+    We always aim for complete<br/> honesty and trustworthiness with <br/>our clients and with one another.
+    </p>
+  </div>
+  <div class="column">
+    <img src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/Bulb.png" alt="Integrity" width="180"/>
+    <h4 style="text-align:center;">KNOWLEDGE</h4>
+    <p class="Disp_para">
+    We are always seeking new opportunities to learn and develop our knowledge base.
+    </p>
+  </div>
+  <div class="column">
+    <img className="img" src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/Arrow%20(1).png" alt="Integrity" width="180" />
+    <h4 style="text-align:center;">IMPROVEMENT</h4>
+    <p class="Disp_para">
+    We are constantly looking to improve ourselves and our organization in order to provide our customers with the very best products and services.
+    </p>
+  </div>
+  <div class="column">
+    <img src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/People.png" alt="Integrity" width="180" />
+    <h4 style="text-align:center;">PEOPLE</h4>
+    <p class="Disp_para">
+    We hire only the very best people and are proud to offer them an environment of respect, dignity, and professionalism.
+    </p>
+  </div>
+</div><br/>
+<br/><br/><br/>
+<b><h1 className="ab" style="text-align:center;">ABOUT CORRUGATED</h1></b>
+<div class="corru">
+Cardboard boxes are industrially prefabricated boxes, primarily used for packaging goods and materials. Specialists in industry seldom use the term cardboard because it does not denote a specific material.The term cardboard may refer to a variety of heavy paper-like materials, including card stock, corrugated fiberboard,and paperboard.Cardboard boxes can be readily recycled.Paper is thin material mainly used for writing upon, printing upon, or for packaging. It is produced by pressing together moist fibers, typically cellulose pulp derived from wood, rags, or grasses, and drying them into flexible sheets.
+Paperboard, sometimes known as cardboard, is generally thicker (usually over 0.25 mm or 10 points) than paper. According to ISO standards, paperboard is a paper with a basis weight (grammage) above 224 g/m2, but there are exceptions. Paperboard can be single- or multi-ply.
+Corrugated fiberboard sometimes known as corrugated board or corrugated cardboard, is a combined paper-based material consisting of a fluted corrugated medium and one or two flat liner boards
+</div>
+<br/>
+<br/><br/>
+<b><h1 className="ab" style="text-align:center;">OUR STRENGTHS</h1></b>
+<div class="Disp_values">
+  <div class="column1">
+    <img src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/barcode.png" alt="Integrity" width="180" />
+    <p class="Disp_para">
+    Our catalog includes an abundance of industrial packaging products that are available, and many are ready to ship the same day.
+    </p>
+  </div>
+  <div class="column1">
+    <img src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/money.png" alt="Integrity" width="180"/>
+    <p class="Disp_para">
+    Our highly competitive pricing lowers your costs and boosts your bottom line, which is why we are offering our lower price guarantee.
+    </p>
+  </div>
+  <div class="column1">
+    <img className="img" src="https://www.sarkina.com/ASSETS/IMAGES/CMS/STATIC_IMAGES/Static_Images/box-dolly.png" alt="Integrity" width="180" />
+    <p class="Disp_para">
+    When it comes to packaging supplies, we carry many options from global leaders in the packaging industry. That means you get the highest quality products at the most competitive rates.
+    </p>
+  </div>
+</div>
+</div></div>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
+
+</html>
